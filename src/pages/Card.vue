@@ -27,12 +27,19 @@
           <li class="option">Сдача 1 кв. 2026</li>
         </ul>
       </div>
+
+      <div class="vector">
+        <hr />
+      </div>
       <div class="price">
-        <div class="vector">
-          <hr>
-        </div>
-        <div class="">12 886 400 ₽</div>
-        <div class="card__price--discount">12 886 400 ₽</div>
+        <div>12 886 400 ₽</div>
+        <div class="discount">12 886 400 ₽</div>
+        <button class="btn">10%</button>
+      </div>
+      <div class="buttons">
+        <button class="btn blue">Отделка</button>
+        <button class="btn blue">Вид на горы</button>
+        <button class="btn blue">+2</button>
       </div>
     </div>
   </div>
@@ -40,12 +47,12 @@
 
 <style lang="sass" scoped>
 @import '../assets/styles/main'
-
 .card
   position: relative
   width: 295px
   height: 522px
-  border: solid 1px
+  border: solid 1px transparent
+  margin-right: 30px
 
 .icons .fire, .heart, .scales
   &::before
@@ -58,10 +65,12 @@
 
 .fire
   &::before
+    position: absolute
     background: url('../assets/img/button_fire.svg') no-repeat
-    margin-top: 10px
+    // margin-top: 10px
     margin-left: 10px
     left: 0
+    top: 0
 
 .heart
   &::before
@@ -83,13 +92,16 @@
   height: 198px
   margin: 0 20px 24px 20px
 
+.base
+  margin-bottom: 16px
+
 .location
   width: 181px
   height: 14px
   color: $locationColor
   line-height: 100%
   margin-bottom: 6px
-  
+
 .title
   width: 240px
   height: 40px
@@ -101,21 +113,60 @@
   display: flex
   color: $optionColor
   width: 253px
-  
+
 .option
   line-height: 157.143%
   white-space: nowrap
-  margin-right: 12px
+  margin-right: 22px
+
   &:first-child
     list-style: none
 
-.price
+.vector hr
   width: 255px
-  height: 88px
+  height: 1px
+  border: 0
+  color: $vectorColor
+  background-color: $vectorColor
+  margin-bottom: 14px
 
-  .vector hr
-    width: 255px
-    height: 0px
-    border-color: $vectorColor
-    
+.price
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 255px
+  height: 25px
+  font-size: 18px
+  font-style: normal
+  font-weight: 600
+  line-height: 138.889%
+  white-space: nowrap
+  margin-bottom: 20px
+
+.discount
+  text-decoration: line-through
+  font-size: 14px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+
+.btn
+  border-radius: 30.541px
+  background: $brandColor
+  border: 0
+  font-size: 14px
+  color: $promotionColor
+  width: 39px
+  height: 25px
+  margin: 0
+
+.buttons
+  display: flex
+  justify-content: start
+.blue
+  background: $buttonColor
+  color: $buttonTextColor
+  width: fit-content
+  margin-right: 4px
+  height: 29px
 </style>
