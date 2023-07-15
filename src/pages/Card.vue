@@ -52,7 +52,6 @@
   width: 295px
   height: 522px
   border: solid 1px transparent
-  margin-right: 30px
 
 .icons .fire, .heart, .scales
   &::before
