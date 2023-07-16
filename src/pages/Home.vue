@@ -1,6 +1,8 @@
 <script setup>
 import Card from "./Card.vue";
 import TheInput from "./TheInput.vue";
+import TheSelect from "./TheSelect.vue";
+import SelectComponent from "./SelectComponent.vue";
 </script>
 
 <template>
@@ -11,7 +13,7 @@ import TheInput from "./TheInput.vue";
       </div>
       <div class="title">Вам подходит 375 вариантов</div>
       <div class="input_block_drop">
-        <TheInput />
+        <SelectComponent />
       </div>
       <div class="filtration">Сортировать:</div>
       <div class="list">

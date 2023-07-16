@@ -4,22 +4,29 @@ const input = ref("");
 </script>
 
 <template>
-  <!-- <el-input v-model="input" placeholder="Please input" /> -->
   <label class="label" for="email">Ваш email</label>
-  <input class="warning" type="email" placeholder="myname@gmail.com" />
+  <input type="text" placeholder="myname@gmail.com" list="list" />
+  <datalist id="list">
+    <option>Volvo</option>
+    <option>Saab</option>
+    <option>Mercedes</option>
+    <option>Audi</option>
+  </datalist>
 </template>
 
 <style lang="sass" scoped>
 @import '../assets/styles/main'
+
 .label
   color: #929292
 
 input
+  margin-top: 10px
+  padding-right: 10px
   display: flex
   outline: none
-  margin: 10px 0
   padding-left: 11.1px
-  width: 568px
+  width: 230px
   height: 46px
   border: 1px solid $borderColor
   border-radius: 4px
@@ -28,7 +35,6 @@ input
   &::placeholder
     color: #B7B5BE
 
-  // .warning
-  //   outline: solid
-  //   border: 1px solid #EA5455
+datalist
+  padding: 0
 </style>

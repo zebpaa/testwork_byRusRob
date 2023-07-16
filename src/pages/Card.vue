@@ -198,6 +198,7 @@
   width: 39px
   height: 25px
   margin: 0
+  outline: none
 
 .buttons
   display: flex
