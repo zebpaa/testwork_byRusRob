@@ -55,6 +55,20 @@
   width: 1270px
   height: 140px
 
+@media (max-width: 1024px)
+  .card
+    width: 992px 
+
+@media (max-width: 768px)
+  .card
+    width: 736px
+    height: 147px
+    
+@media (max-width: 375px)
+  .card
+    width: 343px
+    height: 292px
+
 .icons .fire, .heart, .scales
   &::before
     position: absolute

@@ -47,11 +47,27 @@
 
 <style lang="sass" scoped>
 @import '../assets/styles/main'
+
+// @media (max-width: 1920px)
 .card
   position: relative
   width: 295px
   height: 522px
-  border: solid 1px transparent
+  background: #fff
+  overflow: hidden
+  border: 1px solid $borderColor
+
+@media (max-width: 1024px)
+  .card
+    width: 308px
+
+@media (max-width: 768px)
+  .card
+    width: 351px
+
+@media (max-width: 375px)
+  .card
+    width: 343px
 
 .icons .fire, .heart, .scales
   &::before
@@ -64,7 +80,6 @@
 
 .fire
   &::before
-    position: absolute
     background: url('../assets/img/button_fire.svg') no-repeat
     // margin-top: 10px
     margin-left: 10px
@@ -113,13 +128,38 @@
   color: $optionColor
   width: 253px
 
-.option
+// .option
+//   line-height: 157.143%
+//   white-space: nowrap
+//   margin-right: 22px
+    
+//   &:first-child
+//     list-style: none
+
+.option 
   line-height: 157.143%
   white-space: nowrap
-  margin-right: 22px
+  margin-left: 22px
+  list-style: none
+  position: relative
 
-  &:first-child
-    list-style: none
+.option:before 
+  content: ""
+  background: #224E9C
+  width: 4px
+  height: 4px
+  display: block
+  border-radius: 50%
+  position: absolute
+  left: -12.5px
+  top: 50%
+  transform: translateY(-50%)
+
+.option:first-child 
+  margin-left: 0
+
+.option:first-child:before 
+  width: 0
 
 .vector hr
   width: 255px
