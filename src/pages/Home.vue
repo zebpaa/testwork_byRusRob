@@ -19,6 +19,11 @@ import SelectComponent from "./SelectComponent.vue";
       <div class="list">
         <Card v-for="item in 8" />
       </div>
+      <ul class="numbers" >
+        <li v-for="number in 3">
+          {{ number }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -63,4 +68,14 @@ import SelectComponent from "./SelectComponent.vue";
   gap: 30px
   justify-content: center
   padding-bottom: 45px
+
+.numbers
+  display: flex
+  justify-content: center
+  list-style: none
+  font-size: 18px
+  font-weight: 600
+  line-height: 150%
+.numbers li
+  margin-right: 10px
 </style>
