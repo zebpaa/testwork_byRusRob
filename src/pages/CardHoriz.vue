@@ -23,13 +23,13 @@
             2-комнатная квартира № 262, 65.6 м<sup>2</sup>
           </div>
         </div>
-
-        <ul class="options">
-          <li class="option">Литер 14</li>
-          <li class="option">Этаж 10</li>
-          <li class="option">Сдача 1 кв. 2026</li>
-        </ul>
-
+        <div class="info">
+          <ul class="options">
+            <li class="option">Литер 14</li>
+            <li class="option">Этаж 10</li>
+            <li class="option">Сдача 1 кв. 2026</li>
+          </ul>
+        </div>
         <div class="price">
           <div class="discount">17 100 400 ₽</div>
           <div class="price">16 500 000 ₽</div>
@@ -54,20 +54,6 @@
   position: relative
   width: 1270px
   height: 140px
-
-@media (max-width: 1024px)
-  .card
-    width: 992px 
-
-@media (max-width: 768px)
-  .card
-    width: 736px
-    height: 147px
-    
-@media (max-width: 375px)
-  .card
-    width: 343px
-    height: 292px
 
 .icons .fire, .heart, .scales
   &::before
@@ -101,12 +87,11 @@
   margin: 11px 35px 12px 35px
 
 .description
-  display: flex
   position: absolute
   top: 30px
   left: 170px
   margin-right: 45px
-
+  
 .base
   display: flex
   width: 220px
@@ -120,18 +105,22 @@
   margin-bottom: 13px
 
 .title
-  width: 240px
+  width: 220px
   height: 40px
   font-size: 16px
   font-weight: 600
   margin-bottom: 12px
 
+.info
+  display: flex
+  align-items: center
 .options
   width: 322px
   height: 17px
   display: flex
   color: $optionColor
   margin-right: 82px
+  align-items: center
 
 .option
   margin-right: 34px
@@ -181,4 +170,18 @@
   width: fit-content
   margin-right: 4px
   height: 29px
+
+@media (max-width: 1024px)
+  .card
+    width: 992px
+
+@media (max-width: 768px)
+  .card
+    width: 736px
+    height: 147px
+
+@media (max-width: 375px)
+  .card
+    width: 343px
+    height: 292px
 </style>

@@ -57,18 +57,6 @@
   overflow: hidden
   border: 1px solid $borderColor
 
-@media (max-width: 1024px)
-  .card
-    width: 308px
-
-@media (max-width: 768px)
-  .card
-    width: 351px
-
-@media (max-width: 375px)
-  .card
-    width: 343px
-
 .icons .fire, .heart, .scales
   &::before
     position: absolute
@@ -84,7 +72,7 @@
     // margin-top: 10px
     margin-left: 10px
     left: 0
-    top: 0
+    top: 0   
 
 .heart
   &::before
@@ -209,4 +197,16 @@
   width: fit-content
   margin-right: 4px
   height: 29px
+
+@media (max-width: 1024px)
+  .card
+    width: 308px
+    
+@media (max-width: 768px)
+  .card
+    width: 351px
+
+@media (max-width: 375px)
+  .card
+    width: 343px
 </style>
